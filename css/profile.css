@@ -102,3 +102,58 @@
     object-fit: contain;
 }
 
+
+
+.vektor{
+    width: 50px;
+    background: #035D6E;
+    padding: 10px;
+    border-radius: 10px;
+}
+.buy a{
+    font-weight: 500;
+    color: #000;
+    text-decoration: none;
+}
+
+
+
+
+
+
+
+
+
+  .form-container label {
+    /* display: block; */
+    margin-bottom: 10px;
+    font-size: 16px;
+    font-weight: 500;
+    color: #333;
+  }
+
+  .form-container input[type="file"] {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    border: 2px solid #ddd;
+    border-radius: 6px;
+    outline: none;
+  }
+
+  .form-container input[type="file"]:focus {
+    border-color: #035D6E;
+  }
+
+  .form-container button {
+    font-weight: 500;
+    padding: 19px !important;
+    background: none;
+    border: none;
+    font-size: 20px;
+  }
+  .form-container button  .vektor{
+    width: 55px;
+    margin-left: 10px;
+  }
