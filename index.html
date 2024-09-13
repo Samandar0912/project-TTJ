@@ -12,11 +12,31 @@
     <div class="container">
         <nav class="navbar-top">
             <ul>
-                <li><a href="#">Admin</a></li>
-                <li><a href="#">Kirish</a></li>
+                <li><a class="btn" href="#">Admin</a></li>
+                <li><a type="button" class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal">Kirish</a></li>
             </ul>
         </nav>
     </div>
+    
+    <div class="container">
+        
+  
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header"><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button></div>
+        <div class="modal-body">
+            <form action="" method="post">
+                <img src="./img/jizpi.jpg" alt="" width="140" height="140">
+                <input type="text" placeholder="Username">
+                <input type="password" placeholder="Parol">
+                <button type="submit" class="btn btn-primary">KIRISH</button>
+            </form>
+        </div>
+      </div>
+    </div>
+  </div>
 
     <div class="container">
         <nav class="navbar-center">
@@ -48,7 +68,10 @@
             </div>
         </div>
     </div>
+</div>
 
+
+    
 
 
 
