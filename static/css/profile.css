@@ -96,9 +96,13 @@
     height: 250px;
     overflow: hidden;
 }
-.img-box img{
+.img-box label{
     display: block;
-    margin:50px auto;
+    object-fit: contain;
+}
+.img-box label img{ 
+    width: 230px;
+    padding: 10px;
     object-fit: contain;
 }
 

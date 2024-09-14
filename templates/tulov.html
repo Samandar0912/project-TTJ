@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+    <div class="main-box">
+        <center><img src="{% static 'img/payme.png' %}"></center>
+        <div class="row mt-5">
+            <div class="col buy">
+                <a href="#">To`lov shartnomasini yuklab olish <img class="vektor" src="{% static 'img/Vector.png' %}"></a>
+            </div>
+            <div class="col">
+                <div class="form-container">
+                    <form method="POST" enctype="multipart/form-data">
+                        <label for="file">Tolov qilinganligi haqida chekni yuklash</label>
+                        <input type="file" id="file" name="file" multiple />
+                        
+                        <button type="submit">Yuklash  <img class="vektor" src="{% static 'img/Vector1.png' %}" alt="Submit"> </button>
+                        
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock content %}

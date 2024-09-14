@@ -1,0 +1,61 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}Profile{% endblock title %}
+{% block style %}
+    #images{
+        display:none;
+    }
+{% endblock style %}
+
+{% block content %}
+    <form action="" method="">
+        <div class="row">
+            <div class="col-2 img-box">
+                <label for="images">
+                    <img src="{% static 'img/Group.png' %}">
+                </label>
+                <input type="file" id="images">
+            </div>
+            <div class="col-1">
+            
+            </div>
+            <div class="col-6">
+                <div class="mb-3">
+                    <label class="form-label">name</label>
+                    <input type="text" class="form-control">
+            
+                    <label class="form-label">UserName</label>
+                    <input type="text" class="form-control">
+            
+                    <label class="form-label">tell number</label>
+                    <input type="text" class="form-control">
+                </div>
+            </div>
+            <div class="col-10 mt-5">
+                <div class="mb-3">
+                    <select class="form-select" aria-label="Default select example">
+                        <option selected>Fakultetlar</option>
+                        <option value="1">One</option>
+                        <option value="2">Two</option>
+                        <option value="3">Three</option>
+                    </select>
+                    
+                    <select class="form-select mt-4 mb-4" aria-label="Default select example">
+                        <option selected>Yo'nalishlar</option>
+                        <option value="1">One</option>
+                        <option value="2">Two</option>
+                        <option value="3">Three</option>
+                    </select>
+
+                </div>
+                    
+                <div class="mb-3 col-3">
+                    <label class="form-label">guruh</label>
+                    <input type="text" class="form-control">
+                </div>
+            </div>
+        </div>
+
+        <button type="submit" class="btn btn-success">Saqlash</button>
+    </form>
+{% endblock content %}
