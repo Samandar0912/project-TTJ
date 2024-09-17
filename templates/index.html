@@ -13,63 +13,43 @@
     <div class="container">
         <nav class="navbar-top">
             <ul>
-                <li><a class="btn" href="#">Admin</a></li>
-                <li><a type="button" class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal">Kirish</a></li>
+                <li><a class="btn" href="{% url 'users:login' %}">Kirish</a></li>
+                <li><a class="btn" href="{% url 'main:userlogin' %}">Admin</a></li>
             </ul>
         </nav>
     </div>
     
     <div class="container">
-        
-  
-  <!-- Modal -->
-  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header"><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button></div>
-        <div class="modal-body">
-            <form action="" method="post">
-                <img src="{% static 'img/jizpi.jpg' %}" alt="" width="140" height="140">
-                <input type="text" placeholder="Username">
-                <input type="password" placeholder="Parol">
-                <button type="submit" class="btn btn-primary">KIRISH</button>
-            </form>
+        <div class="container">
+            <nav class="navbar-center">
+                <ul>
+                    <li><a href="#"><img src="{% static 'img/jizpi.jpg' %}" alt=""> Jizzax Politexnika Instituti</a></li>
+                </ul>
+            </nav>
         </div>
-      </div>
-    </div>
-  </div>
-
-    <div class="container">
-        <nav class="navbar-center">
-            <ul>
-                <li><a href="#"><img src="{% static 'img/jizpi.jpg' %}" alt=""> Jizzax Politexnika Instituti</a></li>
-            </ul>
-        </nav>
-    </div>
 
 
-    <div class="container">
-        <div class="row">
-            <div class="left col-6">
-                <div class="box-top">
-                    <h1>INSTITUT TALABALAR YOTOQHONASI</h1>
-                    <p><span>Jizzax politexnika Instituti</span> talabalar uchun onlayn boshqaru tizim.</p>
-                    <a href="#">ONLAYN ARIZA BERISH</a>
+        <div class="container">
+            <div class="row">
+                <div class="left col-6">
+                    <div class="box-top">
+                        <h1>INSTITUT TALABALAR YOTOQHONASI</h1>
+                        <p><span>Jizzax politexnika Instituti</span> talabalar uchun onlayn boshqaru tizim.</p>
+                    </div>
+                    <div class="box-bottom">
+                        <ul>
+                            <li><a href="#"><img src="{% static 'img/tg.png' %}"></a></li>
+                            <li><a href="#"><img src="{% static 'img/facebook.png' %}"></a></li>
+                            <li><a href="#"><img src="{% static 'img/ins.png' %}"></a></li>
+                        </ul>
+                    </div>
                 </div>
-                <div class="box-bottom">
-                    <ul>
-                        <li><a href="#"><img src="{% static 'img/tg.png' %}"></a></li>
-                        <li><a href="#"><img src="{% static 'img/facebook.png' %}"></a></li>
-                        <li><a href="#"><img src="{% static 'img/ins.png' %}"></a></li>
-                    </ul>
+                <div class="right col-6">
+                    <img src="{% static 'img/kweurs.png' %}">
                 </div>
-            </div>
-            <div class="right col-6">
-                <img src="{% static 'img/kweurs.png' %}">
             </div>
         </div>
     </div>
-</div>
 
 
     

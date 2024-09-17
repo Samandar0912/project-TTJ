@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Main Page{% endblock title %}
+
+{% block content %}
+    <div class="row">
+        {% for student in students %}
+        <div class="col-3 user-img-box">
+            <!-- Check if the student has a photo, otherwise use a default image -->
+            {% if student.photo %}
+                <img class="user-img" src="{{ student.photo.url }}" alt="User Photo">
+            {% else %}
+                <img class="user-img" src="{% static 'images/default.jpg' %}" alt="Default Photo">
+            {% endif %}
+            <h3>{{ student.name }}</h3>
+        </div>
+
+        <div class="col">
+            <div class="block-user">
+                <div class="row">
+                    <div class="col-9 col1">
+                        <h5>
+                            <p>FISH:</p>
+                            <p>{{ student.name }} {{ student.lastName }}</p>
+                        </h5>
+                        <h5>
+                            <p>Fakultet:</p>
+                            <p>{{ student.fakultet }}</p>
+                        </h5>
+                        <h5>
+                            <p>Guruh:</p>
+                            <p>{{ student.guruh }}</p>
+                        </h5>
+                        <h5>
+                            <p>Telefon raqami:</p>
+                            <p>{{ student.number }}</p>
+                        </h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+{% endblock content %}

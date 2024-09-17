@@ -1,0 +1,74 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/profile.css' %}">
+    <link rel="stylesheet" href="{% static 'css/bt.css' %}">
+    <title>{% block title %}{% endblock title %}</title>
+    <style>{% block style %}{% endblock style %}</style>
+    <title>TTJ</title>
+</head>
+<body>
+
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col col-2 sitebar">
+            <ul>
+                <li><a href="{% url "main" %}">Talaba ma`lumotlari</a></li>
+                <li><a href="{% url "tulov" %}">Yotoqhona uchun to`lov qilish</a></li>
+                <li><a href="#">To'lovlar Jadvali</a></li>
+                <li><a href="{% url "logout" %}">Log out</a></li>
+            </ul>
+
+            {% comment %} <ul>
+                <li><a href="{% url "students" %}">Yotoqhona kunlik yo`qlama</a></li>
+                <li><a href="{% url "profile" %}">Foydalanuvchi ma`lumotlari qo'shish</a></li>
+                <li><a href="{% url "users" %}">Barcha Foydalanuvchi</a></li>
+                <li><a href="{% url "tulov" %}">Yotoqhona uchun to`lov qilish</a></li>
+                <li><a href="#">Statistika</a></li>
+                <li><a href="{% url "logout" %}">Log out</a></li>
+            </ul>     {% endcomment %}
+
+
+        </div>
+        <div class="col">
+            <nav class="nav-top">
+                <ul>
+                    <li><a href="{% url "index" %}" class="main"><img src="{% static 'img/jizpi.jpg' %}">Jizzax Politexnika Instituti</a></li>
+                    <li><a href="#" class="user"><img src="{% static 'img/user.jpg' %}">UserName</a></li>
+                </ul>
+            </nav>
+
+            
+            
+            <div class="main-box">
+                {% block content %}{% endblock content %}
+            </div>
+
+
+
+        </div>
+      </div>
+
+
+
+      <footer class="bg-body-tertiary text-center text-lg-start">
+        <!-- Copyright -->
+        <div class="text-center p-5" style="background-color: rgba(0, 0, 0, 0.05); font-size:17px">
+          © 2024 Copyright:
+          <a class="text-body" href="#">Jizpi IT-Park tomonindan tayorlandi</a>
+        </div>
+        <!-- Copyright -->
+      </footer>
+      
+      
+      
+    </div>
+
+
+    <script src="{% static "js/bt.js" %}"></script>
+    <script src="{% static "js/script.js" %}"></script>
+</body>
+</html>
