@@ -1,23 +1,15 @@
 from django.urls import path
-from .views import index, users, students, tulov, main, logout_user, userlogin, profiles, adminIndex
+from .views import index, logout_user, login_user, mainIndex, mainProfile, mainStudents
 
-app_name = 'main' #=> asosiy app
+app_name='main' #=> asosiy app
 
 urlpatterns = [
-    path('',index,name='index'),
-    path('',logout_user,name='logout'),
+    path("", index, name="index"),
+    path("login", login_user, name="loginAdmin"),
+    path("logout_user", logout_user, name="logout"),
+    path("main", mainIndex, name="mainIndex"),
+    path("profile", mainProfile, name="mainProfile"),
+    path("students", mainStudents, name="students"),
     
     
-    path('users/',users,name='users'),
-    path('students/',students,name='students'),
-    path('tolovlar/',tulov,name='tulov'),
-    path('profile/',main,name='main'),
-    
-    
-    path('user-login/',userlogin,name='userlogin'),
-    path('admin-profiles/',profiles,name='profiles'),
-    path('admin-page/',adminIndex,name='adminIndex'),
-
-
-
 ]

@@ -1,4 +1,3 @@
-
 import os
 from pathlib import Path
 
@@ -10,7 +9,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/5.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-sr20xpyv!4by-7g_oiinec7ufiesz)x6jlcgwog)d%y6k-7g(l'
+SECRET_KEY = 'django-insecure-h7t8*vrfqpahpjdju!jcquzhw48ftnx=r8u0(l-6f@a-ql9!@a'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -29,6 +28,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'myapp',
     'users',
+    
 ]
 
 MIDDLEWARE = [
@@ -108,24 +108,16 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.1/howto/static-files/
 
 STATIC_URL = '/static/'
-
-# This is where you place paths to directories where you store your static files during development
-STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'static'),  # Assuming you have a 'static' folder in your project root
-]
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static'),]
 
 # STATIC_ROOT = BASE_DIR / 'static/'
 
 MEDIA_URL = 'media/'
-MEDIA_ROOT = BASE_DIR / 'meida/'
+MEDIA_ROOT = BASE_DIR / 'media/'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
-
 AUTH_USER_MODEL = 'users.CustomUser'
 
- 
-LOGIN_REDIRECT_URL = "main:index"
-LOGOUT_REDIRECT_URL = "main:index"

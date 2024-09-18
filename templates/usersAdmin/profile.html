@@ -1,4 +1,4 @@
-{% extends "base.html" %}
+{% extends "usersAdmin/base.html" %}
 {% load static %}
 {% block title %}Profile{% endblock title %}
 {% block style %}
@@ -6,8 +6,7 @@
         display:none;
     }
 {% endblock style %}
-
-{% block content %}
+{% block main %}
     <form action="" method="">
         <div class="row">
             <div class="col-2 img-box">
@@ -21,14 +20,17 @@
             </div>
             <div class="col-6">
                 <div class="mb-3">
-                    <label class="form-label">name</label>
+                    <label class="form-label">Ism:</label>
+                    <input type="text" class="form-control">
+                    
+                    <label class="form-label">Familya</label>
                     <input type="text" class="form-control">
             
-                    <label class="form-label">UserName</label>
+                    <label class="form-label">Tell raqam:</label>
                     <input type="text" class="form-control">
             
-                    <label class="form-label">tell number</label>
-                    <input type="text" class="form-control">
+                    <label class="form-label">Parol</label>
+                    <input type="password" class="form-control">
                 </div>
             </div>
             <div class="col-10 mt-5">
@@ -58,4 +60,4 @@
 
         <button type="submit" class="btn btn-success">Saqlash</button>
     </form>
-{% endblock content %}
+{% endblock main %}

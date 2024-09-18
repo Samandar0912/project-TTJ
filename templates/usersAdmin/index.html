@@ -1,0 +1,32 @@
+{% extends "usersAdmin/base.html" %}
+{% load static %}
+{% block title %}Admin page{% endblock title %}
+{% block main %}
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Ism:</th>
+            <th scope="col">fakultet</th>
+            <th scope="col">kursi</th>
+            <th scope="col">guruhi</th>
+            <th scope="col">Kirish</th>
+            <th scope="col">Chiqish</th>
+            <th scope="col">Hodagi vaqti</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th scope="row">1</th>
+            <td>Humoyin</td>
+            <td>QMB</td>
+            <td>3-kurs</td>
+            <td>821-21</td>
+            <td>07:55:02</td>
+            <td>12:35:28</td>
+            <td>5</td>
+        </tr>
+
+    </tbody>
+</table>
+{% endblock main %}

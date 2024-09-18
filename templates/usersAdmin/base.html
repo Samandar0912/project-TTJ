@@ -17,12 +17,12 @@
         <div class="col col-2 sitebar">
 
             <ul>
-                <li><a href="{% url "students" %}">Yotoqhona kunlik yo`qlama</a></li>
-                <li><a href="{# url "profile" #}">Foydalanuvchi ma`lumotlari qo'shish</a></li>
-                <li><a href="{% url "users" %}">Barcha Foydalanuvchi</a></li>
+                <li><a href="{% url "main:mainIndex" %}">Yotoqhona kunlik yo`qlama</a></li>
+                <li><a href="{% url "main:mainProfile" %}">Foydalanuvchi ma`lumotlari qo'shish</a></li>
+                <li><a href="{% url "main:students" %}">Barcha Foydalanuvchi</a></li>
         
                 <li><a href="#">Statistika</a></li>
-                <li><a href="{% url "logout" %}">Log out</a></li>
+                <li><a href="{% url "main:logout" %}">Log out</a></li>
             </ul>    
 
 
@@ -30,7 +30,7 @@
         <div class="col">
             <nav class="nav-top">
                 <ul>
-                    <li><a href="{% url "index" %}" class="main"><img src="{% static 'img/jizpi.jpg' %}">Jizzax Politexnika Instituti</a></li>
+                    <li><a href="{% url "main:index" %}" class="main"><img src="{% static 'img/jizpi.jpg' %}">Jizzax Politexnika Instituti</a></li>
                     <li><a href="#" class="user"><img src="{% static 'img/user.jpg' %}">UserName</a></li>
                 </ul>
             </nav>

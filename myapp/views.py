@@ -1,55 +1,40 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render,get_object_or_404, redirect
 from django.contrib.auth import authenticate, login, logout
-from .models import categoryFacultet, categoryYunalish, talabalar
-
 
 # Create your views here.
 
 def index(request):
+    return render(request,'index.html')
+
+
+def logout_user(request):
+    logout(request)
+    return redirect('main:index')
+
+def login_user(request):
     if request.method == "POST":
         username = request.POST['username']
         password = request.POST['password']
         user = authenticate(request, username=username, password=password)
         if user is not None:
             login(request, user)
-            return redirect('main')
+            return redirect('main:mainIndex')
         else:
-            return redirect('index')
-    return render(request, 'index.html')
+            return redirect('main:loginAdmin')     
+    return render(request,'usersAdmin/login.html')
 
 
-def logout_user(request):
-    logout(request)
-    return redirect('index')
-    
-
-def tulov(request):
-    return render(request,'tulov.html')
 
 
-def main(request):
-    students = talabalar.objects.all()
-    context = {
-        'students': students
-    }
-    return render(request, 'main.html', context)
+def mainIndex(request):
+    return render(request,'usersAdmin/index.html')
 
 
-def users(request):
-    return render(request,'users.html')
+def mainProfile(request):
+    return render(request,'usersAdmin/profile.html')
 
 
-def students(request):
-    return render(request,'students.html')
+def mainStudents(request):
+    return render(request,'usersAdmin/users.html')
 
 
-def userlogin(request):
-    return render(request,'userAdmin/login.html')
-
-
-def profiles(request):
-    return render(request,'userAdmin/profile.html')
-
-
-def adminIndex(request):
-    return render(request,'userAdmin/index.html')
